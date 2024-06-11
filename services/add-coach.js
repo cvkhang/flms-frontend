@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       // Send the player data to the API
-      fetch('http://localhost:3000/coaches', { 
+      fetch('https://flms-backend.onrender.com/coaches', { 
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ function updateCoachList(clubName) {
 const coachList = document.querySelector(".players-table tbody"); 
 
 if (clubName) {
-  fetch(`http://localhost:3000/coaches/${clubName}`) 
+  fetch(`https://flms-backend.onrender.com/coaches/${clubName}`) 
     .then(response => response.json())
     .then(coaches => {
       coachList.innerHTML = ""; 

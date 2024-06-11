@@ -10,7 +10,7 @@ clubSelect.addEventListener("change", () => {
     if (selectedClubValue) {
       playerTable.style.display = "table";
       console.log(selectedClubValue)
-        fetch(`http://localhost:3000/players/${selectedClubValue}`) // Construct the API URL using the value
+        fetch(`https://flms-backend.onrender.com/players/${selectedClubValue}`) // Construct the API URL using the value
             .then(response => response.json())
             .then(players => {
                 playerList.innerHTML = ""; 

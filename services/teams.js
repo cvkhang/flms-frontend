@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const tableBody = document.querySelector('#team-table tbody');
 
-  fetch(`http://localhost:3000/teams/info`) // Construct the API URL using the value
+  fetch(`https://flms-backend.onrender.com/teams/info`) // Construct the API URL using the value
             .then(response => response.json())
             .then(players => {
                 tableBody.innerHTML = ""; 
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function updatePlayerList() {
   const tableBody = document.querySelector('#team-table tbody');
 
-  fetch(`http://localhost:3000/teams/info`) // Construct the API URL using the value
+  fetch(`https://flms-backend.onrender.com/teams/info`) // Construct the API URL using the value
             .then(response => response.json())
             .then(players => {
                 tableBody.innerHTML = ""; 

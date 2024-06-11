@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedClubValue) {
           coachTable.style.display = "table";
           console.log(selectedClubValue)
-            fetch(`http://localhost:3000/coaches/${selectedClubValue}`) // Construct the API URL using the value
+            fetch(`https://flms-backend.onrender.com/coaches/${selectedClubValue}`) // Construct the API URL using the value
                 .then(response => response.json())
                 .then(coachs => {
                     coachList.innerHTML = ""; 

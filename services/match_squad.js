@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-          const response = await fetch(`http://localhost:3000/fixtures/${selectedClub}`);
+          const response = await fetch(`https://flms-backend.onrender.com/fixtures/${selectedClub}`);
           if (!response.ok) { // Check if the API request was successful
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         coachesTable.style.display = 'table';
 
         // Fetch Players Data
-        fetch(`http://localhost:3000/fixtures/players/${selectedClubName}/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/players/${selectedClubName}/${selectedMatchId}`)
             .then(response => response.json())
             .then(players => {
                 const playerTableBody = document.getElementById("player-table-body");
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         // Fetch Coaches Data
-        fetch(`http://localhost:3000/fixtures/coaches/${selectedClubName}/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/coaches/${selectedClubName}/${selectedMatchId}`)
             .then(response => response.json())
             .then(coaches => {
                 const coachTableBody = document.getElementById("coach-table-body");
@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Send the player data to the API
-        fetch(`http://localhost:3000/fixtures/players`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/players`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
   
         // Send the player data to the API
-        fetch(`http://localhost:3000/fixtures/players/${matchID}/${playerID}`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/players/${matchID}/${playerID}`, { 
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Send the coach data to the API
-        fetch(`http://localhost:3000/fixtures/coach`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/coach`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
   
         // Send the coach data to the API
-        fetch(`http://localhost:3000/fixtures/coach/${matchID}/${coachID}`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/coach/${matchID}/${coachID}`, { 
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -333,7 +333,7 @@ function updatePlayerList(matchSelect) {
         coachesTable.style.display = 'table';
 
         // Fetch Players Data
-        fetch(`http://localhost:3000/fixtures/players/${selectedClubName}/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/players/${selectedClubName}/${selectedMatchId}`)
             .then(response => response.json())
             .then(players => {
                 const playerTableBody = document.getElementById("player-table-body");
@@ -368,7 +368,7 @@ function updateCoachList(matchSelect) {
 
 
         // Fetch Coaches Data
-        fetch(`http://localhost:3000/fixtures/coaches/${selectedClubName}/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/coaches/${selectedClubName}/${selectedMatchId}`)
             .then(response => response.json())
             .then(coaches => {
                 const coachTableBody = document.getElementById("coach-table-body");

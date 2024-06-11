@@ -11,7 +11,7 @@ clubSelect.addEventListener("change", () => {
     if (selectedClubValue) {
       fixtureTable.style.display = 'table';
       console.log(selectedClubValue)
-        fetch(`http://localhost:3000/fixtures/${selectedClubValue}`) // Construct the API URL using the value
+        fetch(`https://flms-backend.onrender.com/fixtures/${selectedClubValue}`) // Construct the API URL using the value
             .then(response => response.json())
             .then(fixtures => {
                 fixtureList.innerHTML = ""; 

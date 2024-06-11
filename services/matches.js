@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
 
         try {
-          const response = await fetch(`http://localhost:3000/fixtures/week/${selectedWeek}`);
+          const response = await fetch(`https://flms-backend.onrender.com/fixtures/week/${selectedWeek}`);
           if (!response.ok) { // Check if the API request was successful
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // Fetch Players Data
-        fetch(`http://localhost:3000/fixtures/event/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/event/${selectedMatchId}`)
             .then(response => response.json())
             .then(players => {
                 const playerTableBody = document.getElementById("player-table-body");
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedMatchId = matchSelect.value;
         if (selectedMatchId) {
             matchResultDiv.style.display = "flex";
-            fetch(`http://localhost:3000/fixtures/result/${selectedMatchId}`)
+            fetch(`https://flms-backend.onrender.com/fixtures/result/${selectedMatchId}`)
                 .then(response => response.json())
                 .then(result => {
                     // 3. Display the match result (customize this part)
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Send the player data to the API
-        fetch(`http://localhost:3000/fixtures/event`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/event`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const event_time = parseFloat(document.getElementById("eventTime2").value);
   
         // Send the player data to the API
-        fetch(`http://localhost:3000/fixtures/event/${match_id}/${playerID}/${_event}/${event_half}/${event_time}`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/event/${match_id}/${playerID}/${_event}/${event_half}/${event_time}`, { 
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -242,7 +242,7 @@ function updatePlayerList(matchSelect) {
         playersTable.style.display = 'table';
 
         // Fetch Players Data
-        fetch(`http://localhost:3000/fixtures/event/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/event/${selectedMatchId}`)
             .then(response => response.json())
             .then(players => {
                 const playerTableBody = document.getElementById("player-table-body");
@@ -272,7 +272,7 @@ function updatePlayerList(matchSelect) {
                 });
                         
             });
-            fetch(`http://localhost:3000/fixtures/result/${selectedMatchId}`)
+            fetch(`https://flms-backend.onrender.com/fixtures/result/${selectedMatchId}`)
                 .then(response => response.json())
                 .then(result => {
                     // 3. Display the match result (customize this part)

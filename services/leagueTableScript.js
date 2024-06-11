@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Fetch both sets of data simultaneously
   Promise.all([
-    fetch('http://localhost:3000/teams').then(response => response.json()),
-    fetch('http://localhost:3000/teams/matchplayedbyteam').then(response => response.json())
+    fetch('https://flms-backend.onrender.com/teams').then(response => response.json()),
+    fetch('https://flms-backend.onrender.com/teams/matchplayedbyteam').then(response => response.json())
   ])
   .then(([teamData, matchData]) => {
     teamData.forEach(team => {

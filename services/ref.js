@@ -5,7 +5,7 @@ const refBody = document.querySelector('.players-list-table tbody')
 document.addEventListener("DOMContentLoaded", () => {
     const tableBody = document.querySelector('#ref-table tbody');
 
-  fetch(`http://localhost:3000/referee`) // Construct the API URL using the value
+  fetch(`https://flms-backend.onrender.com/referee`) // Construct the API URL using the value
             .then(response => response.json())
             .then(players => {
                 tableBody.innerHTML = ""; 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       // Send the player data to the API
-      fetch(`http://localhost:3000/referee`, { 
+      fetch(`https://flms-backend.onrender.com/referee`, { 
           method: 'POST',
           headers: {
               'Content-Type': 'application/json'
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const ref_id = document.getElementById("clubName2").value;
 
       // Send the player data to the API
-      fetch(`http://localhost:3000/referee/${ref_id}`, { 
+      fetch(`https://flms-backend.onrender.com/referee/${ref_id}`, { 
           method: 'DELETE',
           headers: {
               'Content-Type': 'application/json'
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playersTable.style.display = "table";
         random.style.display = "flex";
 
-        fetch(`http://localhost:3000/referee/schedule/${selectedWeek}`) // Construct the API URL using the value
+        fetch(`https://flms-backend.onrender.com/referee/schedule/${selectedWeek}`) // Construct the API URL using the value
             .then(response => response.json())
             .then(players => {
                 refBody.innerHTML = ""; 
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
         // Fetch Players Data
-        fetch(`http://localhost:3000/fixtures/event/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/event/${selectedMatchId}`)
             .then(response => response.json())
             .then(players => {
                 const playerTableBody = document.getElementById("player-table-body");
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedMatchId = matchSelect.value;
         if (selectedMatchId) {
             matchResultDiv.style.display = "flex";
-            fetch(`http://localhost:3000/fixtures/result/${selectedMatchId}`)
+            fetch(`https://flms-backend.onrender.com/fixtures/result/${selectedMatchId}`)
                 .then(response => response.json())
                 .then(result => {
                     // 3. Display the match result (customize this part)
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // Send the player data to the API
-        fetch(`http://localhost:3000/fixtures/event`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/event`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const event_time = parseFloat(document.getElementById("eventTime2").value);
   
         // Send the player data to the API
-        fetch(`http://localhost:3000/fixtures/event/${match_id}/${playerID}/${_event}/${event_half}/${event_time}`, { 
+        fetch(`https://flms-backend.onrender.com/fixtures/event/${match_id}/${playerID}/${_event}/${event_half}/${event_time}`, { 
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -384,7 +384,7 @@ function updateRefMatchList(matchweek) {
         playersTable.style.display = 'table';
 
         // Fetch Players Data
-        fetch(`http://localhost:3000/fixtures/event/${selectedMatchId}`)
+        fetch(`https://flms-backend.onrender.com/fixtures/event/${selectedMatchId}`)
             .then(response => response.json())
             .then(players => {
                 const playerTableBody = document.getElementById("player-table-body");
@@ -414,7 +414,7 @@ function updateRefMatchList(matchweek) {
                 });
                         
             });
-            fetch(`http://localhost:3000/fixtures/result/${selectedMatchId}`)
+            fetch(`https://flms-backend.onrender.com/fixtures/result/${selectedMatchId}`)
                 .then(response => response.json())
                 .then(result => {
                     // 3. Display the match result (customize this part)
