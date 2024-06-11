@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Football League</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: rgb(52,0,64);
+      background: radial-gradient(circle, rgba(52,0,64,1) 0%, rgba(128,2,157,1) 64%);
+      min-height: 100vh;
+    }
+    /* In your main container (e.g., <main> or <body>) */
+    main {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;    /* Center vertically */
+      min-height: 70vh;       /* Ensure the container is at least the viewport height */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+  <script src=".\components\header.js"></script>
+
+  <main>
+    <nav class="main-nav">
+      <h2 class="nav-title">Team Manage</h2> 
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/front-end/public/players.html" class="nav-link">Players</a></li>
+        <li class="nav-item"><a href="/front-end/public/coaches.html" class="nav-link">Coaches</a></li>
+        <li class="nav-item"><a href="/front-end/public/squad.html" class="nav-link">Squad Submit</a></li>
+      </ul>
+    </nav>
+  </main>
+  
+
+  
+</body>
+
+</html>

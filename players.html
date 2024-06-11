@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Football League</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: rgb(52,0,64);
+      background: radial-gradient(circle, rgba(52,0,64,1) 0%, rgba(128,2,157,1) 64%);
+      min-height: 100vh;
+    }
+    /* In your main container (e.g., <main> or <body>) */
+    main {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;    /* Center vertically */
+      min-height: 70vh;       /* Ensure the container is at least the viewport height */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+  <script src=".\components\header.js"></script>
+
+  <div class ="club-menu">
+    <label for="club-select" class = "label">Your Club:</label>
+    <select id="club-select" name="club">
+      <option value="">--Select--</option> 
+      <option value="Arsenal">Arsenal</option>
+      <option value="Aston Villa">Aston Villa</option>
+      <option value="Bournemouth">Bournemouth</option>
+      <option value="Brentford">Brentford</option>
+      <option value="Brighton and Hove Albion">Brighton and Hove Albion</option>
+      <option value="Burnley">Burnley</option>
+      <option value="Chelsea">Chelsea</option>
+      <option value="Crystal Palace">Crystal Palace</option>
+      <option value="Everton">Everton</option>
+      <option value="Fulham">Fulham</option>
+      <option value="Liverpool">Liverpool</option>
+      <option value="Luton Town">Luton Town</option>
+      <option value="Manchester City">Manchester City</option>
+      <option value="Manchester United">Manchester United</option>
+      <option value="Newcastle United">Newcastle United</option>
+      <option value="Nottingham Forest">Nottingham Forest</option>
+      <option value="Sheffield United">Sheffield United</option>
+      <option value="Tottenham Hotspur">Tottenham Hotspur</option>
+      <option value="West Ham United">West Ham United</option>
+      <option value="Wolverhampton Wanderers">Wolverhampton Wanderers</option>
+    </select>
+  </div>
+
+  <table class="players-table" style="display: none;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Shirt No</th>
+            <th>Position</th>
+            <th>D.O.B</th>
+            <th>Begin Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script src=".\services\players.js"></script>
+    </tbody> 
+  </table>
+
+  <div class = "player-function">
+    <button class="add-player">Add Player</button>
+    <button class="update-player">Update Player</button>
+    <button class="delete-player">Delete Player</button>
+  </div>
+
+  <div id="addPlayerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span> 
+      <h2>Add New Player</h2>
+      <form id="addPlayerForm">
+        <label for="playerName">Player Name:</label>
+        <input type="text" id="playerName" name="playerName" required><br><br>
+
+        <label for="shirtNumber">Shirt Number:</label>
+        <input type="number" id="shirtNumber" name="shirtNumber" required><br><br>
+        
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required><br><br>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required><br><br>
+
+
+        <label for="beginDate">Begin Date:</label>
+        <input type="date" id="beginDate" name="beginDate" required><br><br>
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="beginDate" required><br><br>
+
+        <button type="submit">Add Player</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="updatePlayerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button2">&times;</span> 
+      <h2>Update Player</h2>
+      <form id="updatePlayerForm">
+
+        <label for="playerID">Player ID:</label>
+        <input type="text" id="playerID" name="playerName" required><br><br>
+
+        <label for="playerName2">Player Name:</label>
+        <input type="text" id="playerName2" name="playerName" required><br><br>
+
+        <label for="shirtNumber2">Shirt Number:</label>
+        <input type="number" id="shirtNumber2" name="shirtNumber" required><br><br>
+        
+        <label for="position2">Position:</label>
+        <input type="text" id="position2" name="position" required><br><br>
+
+        <label for="dateOfBirth2">Date of Birth:</label>
+        <input type="date" id="dateOfBirth2" name="dateOfBirth" required><br><br>
+
+
+        <label for="beginDate2">Begin Date:</label>
+        <input type="date" id="beginDate2" name="beginDate" required><br><br>
+
+        <label for="endDate2">End Date:</label>
+        <input type="date" id="endDate2" name="beginDate" required><br><br>
+
+        <button type="submit">Update Player</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="deletePlayerModal" class="modal">
+    <div class="modal-content2">
+      <span class="close-button3">&times;</span> 
+      <h2>Delete Player</h2>
+      <form id="deletePlayerForm">
+        <label for="playerName3">Player ID:</label>
+        <input type="text" id="playerName3" name="playerName" required><br><br>
+        <button type="submit">Delete Player</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+  
+
+  
+</body>
+<script src=".\services\add-player.js"></script>
+<script src=".\services\update-player.js"></script>
+<script src=".\services\delete-player.js"></script>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Football League</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: rgb(52,0,64);
+      background: radial-gradient(circle, rgba(52,0,64,1) 0%, rgba(128,2,157,1) 64%);
+      min-height: 100vh;
+    }
+    /* In your main container (e.g., <main> or <body>) */
+    main {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center;    /* Center vertically */
+      min-height: 70vh;       /* Ensure the container is at least the viewport height */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+  <script src=".\components\header.js"></script>
+
+  <table id="ref-table">
+    <thead>
+        <tr>
+            <th>Referee ID</th>
+            <th>Referee Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody> 
+</table>
+
+<div class = "player-function">
+    <button class="add-player">Add Referee</button>
+    <button class="delete-player">Delete Referee</button>
+  </div>
+
+  <div id="addPlayerModal" class="modal" style="height:100%">
+    <div class="modal-content">
+      <span class="close-button">&times;</span> 
+      <h2>Add New Referee</h2>
+      <form id="addPlayerForm">
+
+        <label for="playerID">Referee ID:</label>
+        <input type="text" id="playerID" name="playerID" required><br><br>
+
+        <label for="event">Referee Name:</label>
+        <input type="text" id="event" name="event" required><br><br>
+
+
+
+        <button type="submit">Add Referee</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="deletePlayerModal" class="modal">
+    <div class="modal-content2">
+      <span class="close-button2">&times;</span> 
+      <h2>Delete Team</h2>
+      <form id="deletePlayerForm">
+
+        <label for="clubName2">Club Name:</label>
+        <input type="text" id="clubName2" name="playerID" required><br><br>
+
+
+        <button type="submit">Delete Referee</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="week-match">
+        <div class ="week-menu">
+            <label for="week-select" class = "label">Choose Matchweek:</label>
+            <select id="week-select" name="week">
+                <option value="">--Select--</option> 
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+            </select>
+        </div>
+
+  </div>
+
+  <div>
+    
+  </div>
+
+  <table class="players-list-table" style="display: none;">
+    <h2 class="random" style="display: none;">Referee Schedule</h2>
+    <thead>
+        <tr>
+            <th>Referee ID</th>
+            <th>Referee Name</th>
+            <th>Match ID</th>
+            <th>Match Time</th>
+            <th>Match Location</th>
+        </tr>
+    </thead>
+    <tbody id="player-table-body"></tbody> 
+  </table>
+
+  <div class = "player-function">
+    <button class="add-player">Add Event</button>
+    <button class="delete-player">Delete Event</button>
+  </div>
+
+  <div id="addPlayerModal" class="modal" style="height:100%">
+    <div class="modal-content">
+      <span class="close-button">&times;</span> 
+      <h2>Add New Event</h2>
+      <form id="addPlayerForm">
+
+        <label for="playerID">Player ID:</label>
+        <input type="number" id="playerID" name="playerID" required><br><br>
+
+        <label for="event">Event:</label>
+        <input type="text" id="event" name="event" required><br><br>
+
+        <label for="eventHalf">Event Half:</label>
+        <input type="number" id="eventHalf" name="event" required><br><br>
+
+        <label for="eventTime">Event Time:</label>
+        <input type="number" id="eventTime" name="event" required><br><br>
+
+
+        <button type="submit">Add Event</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="deletePlayerModal" class="modal">
+    <div class="modal-content2">
+      <span class="close-button2">&times;</span> 
+      <h2>Delete Event</h2>
+      <form id="deletePlayerForm">
+
+        <label for="clubName2">Club Name:</label>
+        <input type="text" id="clubName2" name="playerID" required><br><br>
+
+        <label for="playerID2">Player ID:</label>
+        <input type="number" id="playerID2" name="playerID" required><br><br>
+
+        <label for="event2">Event:</label>
+        <input type="text" id="event2" name="event" required><br><br>
+
+        <label for="eventHalf2">Event Half:</label>
+        <input type="number" id="eventHalf2" name="event" required><br><br>
+
+        <label for="eventTime2">Event Time:</label>
+        <input type="number" id="eventTime2" name="event" required><br><br>
+
+        <button type="submit">Delete Event</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+  
+</body>
+<script src=".\services\ref.js"></script>
+</html>
