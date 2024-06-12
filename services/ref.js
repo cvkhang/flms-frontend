@@ -264,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const match_id = document.getElementById("event2").value;
   
         // Send the player data to the API
-        fetch(`https://flms-backend.onrender.com/fixtures/event/${match_id}/${ref_id}`, { 
+        fetch(`https://flms-backend.onrender.com/referee/schedule/${match_id}/${ref_id}`, { 
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
