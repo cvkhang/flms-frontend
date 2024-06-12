@@ -62,12 +62,12 @@
   </div>
 
   <div id="deletePlayerModal" class="modal">
-    <div class="modal-content2">
+    <div class="modal-content">
       <span class="close-button2">&times;</span> 
       <h2>Delete Team</h2>
       <form id="deletePlayerForm">
 
-        <label for="clubName2">Club Name:</label>
+        <label for="clubName2">Referee ID:</label>
         <input type="text" id="clubName2" name="playerID" required><br><br>
 
 
@@ -143,56 +143,42 @@
   </table>
 
   <div class = "player-function">
-    <button class="add-player">Add Event</button>
-    <button class="delete-player">Delete Event</button>
+    <button class="add-player1">Add Referee</button>
+    <button class="delete-player1">Delete Referee</button>
   </div>
 
-  <div id="addPlayerModal" class="modal" style="height:100%">
+  <div id="addPlayerModal1" class="modal" style="height:100%">
     <div class="modal-content">
-      <span class="close-button">&times;</span> 
-      <h2>Add New Event</h2>
-      <form id="addPlayerForm">
+      <span class="close-button3">&times;</span> 
+      <h2>Add New Referee</h2>
+      <form id="addPlayerForm1">
 
-        <label for="playerID">Player ID:</label>
-        <input type="number" id="playerID" name="playerID" required><br><br>
+        <label for="playerID1">Referee ID:</label>
+        <input type="text" id="playerID1" name="playerID" required><br><br>
 
-        <label for="event">Event:</label>
-        <input type="text" id="event" name="event" required><br><br>
-
-        <label for="eventHalf">Event Half:</label>
-        <input type="number" id="eventHalf" name="event" required><br><br>
-
-        <label for="eventTime">Event Time:</label>
-        <input type="number" id="eventTime" name="event" required><br><br>
+        <label for="event1">Match ID:</label>
+        <input type="text" id="event1" name="event" required><br><br>
 
 
-        <button type="submit">Add Event</button>
+        <button type="submit">Add Referee</button>
       </form>
     </div>
   </div>
 
   <div id="deletePlayerModal" class="modal">
-    <div class="modal-content2">
+    <div class="modal-content">
       <span class="close-button2">&times;</span> 
-      <h2>Delete Event</h2>
+      <h2>Delete Referee</h2>
       <form id="deletePlayerForm">
 
-        <label for="clubName2">Club Name:</label>
-        <input type="text" id="clubName2" name="playerID" required><br><br>
+        <label for="playerID2">Referee ID:</label>
+        <input type="text" id="playerID2" name="playerID" required><br><br>
 
-        <label for="playerID2">Player ID:</label>
-        <input type="number" id="playerID2" name="playerID" required><br><br>
-
-        <label for="event2">Event:</label>
+        <label for="event2">Match ID:</label>
         <input type="text" id="event2" name="event" required><br><br>
 
-        <label for="eventHalf2">Event Half:</label>
-        <input type="number" id="eventHalf2" name="event" required><br><br>
 
-        <label for="eventTime2">Event Time:</label>
-        <input type="number" id="eventTime2" name="event" required><br><br>
-
-        <button type="submit">Delete Event</button>
+        <button type="submit">Delete Referee</button>
       </form>
     </div>
   </div>
