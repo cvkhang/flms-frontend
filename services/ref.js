@@ -192,11 +192,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listeners for opening and closing the modal
     addPlayerBtn1.addEventListener("click", () => {
-        addPlayerModal.style.display = "block";
+        addPlayerModal1.style.display = "block";
     });
 
     closeBtn3.addEventListener("click", () => {
-        addPlayerModal.style.display = "none";
+        addPlayerModal1.style.display = "none";
     });
 
     // Handle form submission
